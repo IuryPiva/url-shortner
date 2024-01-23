@@ -28,13 +28,8 @@ export class AppController {
   @Get()
   findAll() {
     const urls = this.appService.findAll();
-    urls.sort((a, b) => b.hits - a.hits);
 
-    const prettyPrintUrl = (url: ShortnedUrl, i) => {
-      return `#${i + 1} - Hits: ${url.hits} - ${url.short} - ${url.url} - ${url.title}`;
-    };
-
-    return urls.map(prettyPrintUrl).join('\n');
+    return urls.sort((a, b) => b.hits - a.hits);
   }
 
   @Post()
