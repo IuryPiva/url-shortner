@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A url shortner for Node.JS. It uses uuid for generating the short code and `Crawler` for getting the websites' titles.
 
 ## Installation
 
@@ -43,6 +43,14 @@ $ pnpm run start:dev
 
 # production mode
 $ pnpm run start:prod
+```
+
+### Create a short URL
+A POST request with `url` param
+```json
+{
+    "url": "https://docs.nestjs.com/controllers"
+}
 ```
 
 ## Test
